@@ -66,8 +66,8 @@ def increment(var, count):
 def genlabels():
     i = [0]
     labels = []
-    labels.append(label("Size",                    *increment(i, WORD)))
-    labels.append(label("Version",                 *increment(i, WORD)))
+    #labels.append(label("Size",                    *increment(i, WORD)))
+    #labels.append(label("Version",                 *increment(i, WORD)))
     labels.append(label("DeviceD1",                *increment(i, BIT)))
     labels.append(label("DeviceD2",                *increment(i, BIT)))
     labels.append(label("LockSupported",           *increment(i, BIT)))
