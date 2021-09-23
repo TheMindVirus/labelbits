@@ -1,0 +1,290 @@
+Python 3.9.4 (tags/v3.9.4:1f2e308, Apr  6 2021, 13:40:21) [MSC v.1928 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+== RESTART: C:\Users\Alastair\Documents\GitHub\labelbits\labelbits_PCM_I2S.py ==
+___[PCM_I2S_CS_A]_______________________________________________
+
+Raw Data:                       00000000001010100110000000000000 [LSB]
+
+//Enable the PCM Audio Interface
+EN:                             -------------------------------0 [RW]
+
+//Enable Reception
+RXON:                           ------------------------------0- [RW]
+
+//Enable Transmission
+TXON:                           -----------------------------0-- [RW]
+
+//Clear the TX FIFO
+TXCLR:                          ----------------------------0--- [W1SC]
+
+//Clear the RX FIFO
+RXCLR:                          ---------------------------0---- [W1SC]
+
+//TXW Flag Trigger Threshold
+TXTHR:                          -------------------------00----- [RW]
+
+//RXR Flag Trigger Threshold
+RXTHR:                          -----------------------00------- [RW]
+
+//DMA DREQ Enable
+DMAEN:                          ----------------------0--------- [RW]
+
+//Reserved
+-:                              -------------------000---------- [-]
+
+//TX FIFO Synchronisation
+TXSYNC:                         ------------------1------------- [RO]
+
+//RX FIFO Synchronisation
+RXSYNC:                         -----------------1-------------- [RO]
+
+//TX FIFO Error
+TXERR:                          ----------------0--------------- [W1C]
+
+//RX FIFO Error
+RXERR:                          ---------------0---------------- [W1C]
+
+//TX FIFO needs Writing
+TXW:                            --------------1----------------- [RO]
+
+//RXR FIFO needs Reading
+RXR:                            -------------0------------------ [RO]
+
+//TX FIFO can Accept Data
+TXD:                            ------------1------------------- [RO]
+
+//RX FIFO contains Data
+RXD:                            -----------0-------------------- [RO]
+
+//TX FIFO is Empty
+TXE:                            ----------1--------------------- [RO]
+
+//RX FIFO is Full
+RXF:                            ---------0---------------------- [RO]
+
+//RX Sign Extend
+RXSEX:                          --------0----------------------- [RW]
+
+//PCM Clock Synchronisation Helper
+SYNC:                           -------0------------------------ [RW]
+
+//Reserved
+-:                              0000000------------------------- [-]
+
+________________________________________________________________
+
+___[PCM_I2S_FIFO_A]_____________________________________________
+
+Raw Data:                       00001101010000001000001010000100 [LSB]
+
+//Write to Transmit, Read to Receive
+FIFO:                           00001101010000001000001010000100 [RW]
+
+________________________________________________________________
+
+___[PCM_I2S_MODE_A]_____________________________________________
+
+Raw Data:                       00000000000000000000000000000000 [LSB]
+
+//Frame Synchronisation Length
+FSLEN:                          ----------------------0000000000 [RW]
+
+//Frame Length
+FLEN:                           ------------0000000000---------- [RW]
+
+//Frame Synchronisation Invert
+FSI:                            -----------0-------------------- [RW]
+
+//Frame Synchronisation Mode
+FSM:                            ----------0--------------------- [RW]
+
+//Clock Invert
+CLKI:                           ---------0---------------------- [RW]
+
+//PCM Clock Mode
+CLKM:                           --------0----------------------- [RW]
+
+//Transmit Frame Packed Mode
+FTXP:                           -------0------------------------ [RW]
+
+//Receive Frame Packed Mode
+FRXP:                           ------0------------------------- [RW]
+
+//PDM Input Mode Enable
+PDME:                           -----0-------------------------- [RW]
+
+//PDM Decimation Factor
+PDMN:                           ----0--------------------------- [RW]
+
+//PCM Clock Disable
+CLK_DIS:                        ---0---------------------------- [RW]
+
+//Reserved
+-:                              000----------------------------- [-]
+
+________________________________________________________________
+
+___[PCM_I2S_RXC_A]______________________________________________
+
+Raw Data:                       00000000000000000000000000000000 [LSB]
+
+//Channel 1 Enable
+CH1EN:                          -0------------------------------ [RW]
+
+//Channel 1 Position
+CH1POS:                         --0000000000-------------------- [RW]
+
+//Channel 1 Width
+CH1WID:                         ------------0000---------------- [RW]
+
+//Channel 1 Width Extension Bit
+CH1WEX:                         0------------------------------- [RW]
+
+//Channel 2 Enable
+CH2EN:                          -----------------0-------------- [RW]
+
+//Channel 2 Position
+CH2POS:                         ------------------0000000000---- [RW]
+
+//Channel 2 Width
+CH2WID:                         ----------------------------0000 [RW]
+
+//Channel 2 Width Extension Bit
+CH2WEX:                         ----------------0--------------- [RW]
+
+________________________________________________________________
+
+___[PCM_I2S_TXC_A]______________________________________________
+
+Raw Data:                       00000000000000000000000000000000 [LSB]
+
+//Channel 1 Enable
+CH1EN:                          -0------------------------------ [RW]
+
+//Channel 1 Position
+CH1POS:                         --0000000000-------------------- [RW]
+
+//Channel 1 Width
+CH1WID:                         ------------0000---------------- [RW]
+
+//Channel 1 Width Extension Bit
+CH1WEX:                         0------------------------------- [RW]
+
+//Channel 2 Enable
+CH2EN:                          -----------------0-------------- [RW]
+
+//Channel 2 Position
+CH2POS:                         ------------------0000000000---- [RW]
+
+//Channel 2 Width
+CH2WID:                         ----------------------------0000 [RW]
+
+//Channel 2 Width Extension Bit
+CH2WEX:                         ----------------0--------------- [RW]
+
+________________________________________________________________
+
+___[PCM_I2S_DREQ_A]_____________________________________________
+
+Raw Data:                       00010000001100000011000000100000 [LSB]
+
+//RX Request Level
+RX_REQ:                         -------------------------0100000 [RW]
+
+//Reserved
+-:                              ------------------------0------- [-]
+
+//TX Request Level
+TX_REQ:                         -----------------0110000-------- [RW]
+
+//Reserved
+-:                              ----------------0--------------- [-]
+
+//RX Panic Level
+RX_PANIC:                       ---------0110000---------------- [RW]
+
+//Reserved
+-:                              --------0----------------------- [-]
+
+//TX Panic Level
+TX_PANIC:                       -0010000------------------------ [RW]
+
+//Reserved
+-:                              0------------------------------- [-]
+
+________________________________________________________________
+
+___[PCM_I2S_INTEN_A]____________________________________________
+
+Raw Data:                       00000000000000000000000000000000 [LSB]
+
+//TX Write Interrupt Enable
+TXW:                            -------------------------------0 [RW]
+
+//RX Read Interrupt Enable
+RXR:                            ------------------------------0- [RW]
+
+//TX Error Interrupt
+TXERR:                          -----------------------------0-- [RW]
+
+//RX Error Interrupt
+RXERR:                          ----------------------------0--- [RW]
+
+//Reserved
+-:                              0000000000000000000000000000---- [-]
+
+________________________________________________________________
+
+___[PCM_I2S_INTSTC_A]___________________________________________
+
+Raw Data:                       00000000000000000000000000000000 [LSB]
+
+//TX Write Interrupt Status / Clear
+TXW:                            -------------------------------0 [W1C]
+
+//RX Read Interrupt Status / Clear
+RXR:                            ------------------------------0- [W1C]
+
+//TX Error Interrupt Status / Clear
+TXERR:                          -----------------------------0-- [W1C]
+
+//RX Error Interrupt Status / Clear
+RXERR:                          ----------------------------0--- [W1C]
+
+//Reserved
+-:                              0000000000000000000000000000---- [-]
+
+________________________________________________________________
+
+___[PCM_I2S_GRAY]_______________________________________________
+
+Raw Data:                       00000000000000000000000000000000 [LSB]
+
+//Enable GRAY Mode
+EN:                             -------------------------------0 [RW]
+
+//Clear the GRAY Mode Logic
+CLR:                            ------------------------------0- [RW]
+
+//Flush the RX Buffer into the RX FIFO
+FLUSH:                          -----------------------------0-- [RW]
+
+//Reserved
+-:                              ----------------------------0--- [-]
+
+//The current fill level of the RX Buffer
+RXLEVEL:                        ----------------------000000---- [RO]
+
+//The number of bits that were flushed into the RX FIFO
+FLUSHED:                        ----------------000000---------- [RO]
+
+//The current level of the RX FIFO
+RXFIFOLEVEL:                    ----------000000---------------- [RO]
+
+//Reserved
+-:                              0000000000---------------------- [-]
+
+________________________________________________________________
+
+>>> 
